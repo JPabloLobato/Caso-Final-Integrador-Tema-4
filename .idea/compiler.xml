@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Comparador-Contador-Ej-3-4" />
+        <module name="Interfaz-Grafica-Ej-7-8-9" />
+        <module name="Validacion-Diseno-Ej-10-11" />
+        <module name="Editor-Texto-Ej-1-2" />
+        <module name="Buscador-Gestor-Ej-5-6" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
