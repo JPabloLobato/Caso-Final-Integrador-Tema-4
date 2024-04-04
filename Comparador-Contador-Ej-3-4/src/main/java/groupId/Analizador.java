@@ -46,4 +46,4 @@ public class Analizador {
         contarPalabras(archivo);
         frecuenciaPalabras(archivo);
     }
-}
+
