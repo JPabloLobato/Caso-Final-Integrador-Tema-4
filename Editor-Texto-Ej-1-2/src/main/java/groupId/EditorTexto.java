@@ -30,6 +30,7 @@ public class EditorTexto extends Application {
         // Botón para guardar el contenido del TextArea en un archivo.
         saveButton.setOnAction(e -> {
             FileChooser fileChooser = new FileChooser();
+            fileChooser.setInitialDirectory(new File("Carpeta txt"));
             File file = fileChooser.showSaveDialog(primaryStage);
             if (file != null) {
                 try (FileWriter writer = new FileWriter(file)) {
@@ -43,6 +44,7 @@ public class EditorTexto extends Application {
         // Botón para cargar el contenido de un archivo en el TextArea.
         loadButton.setOnAction(e -> {
             FileChooser fileChooser = new FileChooser();
+            fileChooser.setInitialDirectory(new File("Carpeta txt"));
             File file = fileChooser.showOpenDialog(primaryStage);
             if (file != null) {
                 try {

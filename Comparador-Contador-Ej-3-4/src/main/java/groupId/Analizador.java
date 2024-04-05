@@ -1,5 +1,6 @@
 package groupId;
 
+// Clases necesarias para la creación de la interfaz gráfica.
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -20,7 +21,7 @@ public class Analizador {
         }
     }
 
-    // Ejemplos de ayudas de edición y el mejoramiento del texto.
+    // 1 Ejemplo de ayuda de edición y el mejoramiento del texto.
     // Clase que muestra la frecuencia de cada palabra en un archivo de texto.
     public static void frecuenciaPalabras(File archivo) {
         try {
@@ -40,10 +41,9 @@ public class Analizador {
         }
     }
 
-    public static void
     public static void main(String[] args) {
         File archivo = new File("archivo.txt");
         contarPalabras(archivo);
         frecuenciaPalabras(archivo);
     }
-
+}

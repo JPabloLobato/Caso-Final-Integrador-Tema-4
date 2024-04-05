@@ -8,7 +8,8 @@ import java.nio.file.Files;
 
 // Clase principal que compara archivos de texto.
 public class Comparador {
-    
+
+    // Clase que compara dos archivos de texto.
     public static void compararArchivo(File archivo1, File archivo2) {
         try {
             List<String> lineasArchivo1 = Files.readAllLines(archivo1.toPath());
@@ -22,6 +23,8 @@ public class Comparador {
             System.out.println("Error al leer los archivos: " + e.getMessage());
         }
     }
+
+    // Método principal que ejecuta el método compararArchivo.
     public static void main(String[] args) {
         File archivo1 = new File("archivo1.txt");
         File archivo2 = new File("archivo2.txt");
