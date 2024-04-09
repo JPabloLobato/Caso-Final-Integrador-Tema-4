@@ -36,7 +36,7 @@ public class EditorTexto extends Application {
                 try (FileWriter writer = new FileWriter(file)) {
                     writer.write(textArea.getText());
                 } catch (IOException ex) {
-                    System.out.println("Error al guardar el archivo" + ex.getMessage());
+                    System.out.println("Error al guardar el archivo." + ex.getMessage());
                 }
             }
         });
@@ -51,10 +51,11 @@ public class EditorTexto extends Application {
                     String content = new String(Files.readAllBytes(Paths.get(file.toURI())));
                     textArea.setText(content);
                 } catch (IOException ex) {
-                    System.out.println("Error al cargar el archivo" + ex.getMessage());
+                    System.out.println("Error al cargar el archivo." + ex.getMessage());
                 }
             }
         });
+
         VBox vbox = new VBox(textArea, saveButton, loadButton);
         Scene scene = new Scene(vbox, 300, 200);
         primaryStage.setScene(scene);
