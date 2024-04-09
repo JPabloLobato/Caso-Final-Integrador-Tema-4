@@ -3,7 +3,7 @@ package groupId;
 import java.io.File;
 
 // Clase principal que ejecuta los métodos de las clases Analizador y Comparador.
-public class Main {
+public class Main_Comparador_Analizador {
     public static void main(String[] args) {
         File archivo = new File("archivo.txt");
 
@@ -13,5 +13,6 @@ public class Main {
         // Se necesitan dos archivos para poder compararlos.
         File archivo2 = new File("archivo2.txt");
         Comparador.compararArchivo(archivo, archivo2);
+
     }
 }

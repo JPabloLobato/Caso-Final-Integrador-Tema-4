@@ -1,6 +1,6 @@
 package groupId;
 
-public class Main {
+public class Main_Editor {
     public static void main(String[] args) {
         EditorTexto.main(args);
     }
