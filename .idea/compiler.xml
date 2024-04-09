@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Comparador-Contador-Ej-3-4" />
-        <module name="Interfaz-Grafica-Ej-7-8-9" />
-        <module name="Validacion-Diseno-Ej-10-11" />
-        <module name="Editor-Texto-Ej-1-2" />
         <module name="Buscador-Gestor-Ej-5-6" />
+        <module name="Editor-Texto-Ej-1-2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Interfaz-Grafica-Ej-7-8-9" target="21" />
+      <module name="Validacion-Diseno-Ej-10-11" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>
