@@ -9,7 +9,6 @@
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/Interfaz-Grafica-Ej-7-8-9/pom.xml" />
         <option value="$PROJECT_DIR$/Validacion-Diseno-Ej-10-11/pom.xml" />
       </set>
     </option>
