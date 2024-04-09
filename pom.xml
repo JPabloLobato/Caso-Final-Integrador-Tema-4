@@ -28,6 +28,11 @@
             <artifactId>javafx-controls</artifactId>
             <version>17</version>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>17</version>
+        </dependency>
 
         <!-- Manejo de archivos y operaciones relacionadas -->
         <!-- Apache Commons IO -->
@@ -60,5 +65,4 @@
             <version>5.6.3.Final</version>
         </dependency>
     </dependencies>
-
 </project>
