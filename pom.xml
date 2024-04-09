@@ -12,6 +12,8 @@
         <module>Editor-Texto-Ej-1-2</module>
         <module>Comparador-Contador-Ej-3-4</module>
         <module>Buscador-Gestor-Ej-5-6</module>
+        <module>Interfaz-Grafica-Ej-7-8-9</module>
+        <module>Validacion-E-mail-Diseno-Grafico-Ej-10-11</module>
     </modules>
 
     <properties>
