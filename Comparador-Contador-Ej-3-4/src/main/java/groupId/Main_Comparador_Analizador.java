@@ -1,18 +1,23 @@
 package groupId;
 
 import java.io.File;
+import java.util.Scanner;
 
-// Clase principal que ejecuta los métodos de las clases Analizador y Comparador.
 public class Main_Comparador_Analizador {
     public static void main(String[] args) {
-        File archivo = new File("archivo.txt");
+        Scanner scanner = new Scanner(System.in);
 
-        Analizador.contarPalabras(archivo);
-        Analizador.frecuenciaPalabras(archivo);
+        System.out.println("Ingresa el nombre del primer archivo:");
+        String nombreArchivo1 = scanner.nextLine();
+        File archivo1 = new File("Carpeta txt/" + nombreArchivo1);
 
-        // Se necesitan dos archivos para poder compararlos.
-        File archivo2 = new File("archivo2.txt");
-        Comparador.compararArchivo(archivo, archivo2);
+        System.out.println("Ingresa el nombre del segundo archivo:");
+        String nombreArchivo2 = scanner.nextLine();
+        File archivo2 = new File("Carpeta txt/" + nombreArchivo2);
 
+        Analizador.contarPalabras(archivo1);
+        Analizador.frecuenciaPalabras(archivo1);
+
+        Comparador.compararArchivo(archivo1, archivo2);
     }
 }
