@@ -3,7 +3,6 @@ package groupId;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class BuscadorPalabras {
 
@@ -26,19 +25,5 @@ public class BuscadorPalabras {
         }
 
         return contador;
-    }
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Ingresa el nombre del archivo:");
-        String nombreArchivo = scanner.nextLine();
-        String rutaArchivo = "Carpeta txt/" + nombreArchivo;
-
-        System.out.println("Ingresa la palabra a buscar:");
-        String palabra = scanner.nextLine();
-
-        int contador = contarOcurrenciasPalabra(rutaArchivo, palabra);
-
-        System.out.println("La palabra '" + palabra + "' aparece " + contador + " vez/veces en el archivo selecionado. '" + nombreArchivo + "'.");
     }
 }

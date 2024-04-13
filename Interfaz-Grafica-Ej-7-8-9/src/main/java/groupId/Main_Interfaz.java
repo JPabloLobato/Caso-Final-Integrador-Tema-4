@@ -1,13 +1,30 @@
 package groupId;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main_Interfaz {
     public static void main(String[] args) {
-        Ventanas ventana1 = new Ventanas();
-        ventana1.abrirDocumento("Contenido del documento 1");
+        // Preguntar al usuario cuántas ventanas desea abrir
+        int numVentanas = pedirNumeroVentanas();
 
-        Ventanas ventana2 = new Ventanas();
-        ventana2.abrirDocumento("Contenido del documento 2");
+        // Crear y mostrar las ventanas
+        for (int i = 0; i < numVentanas; i++) {
+            Ventanas ventana = new Ventanas();
+            ventana.abrirDocumento("Contenido del documento " + (i + 1));
+        }
+    }
+
+    private static int pedirNumeroVentanas() {
+        int numVentanas;
+        try {
+            numVentanas = Integer.parseInt(JOptionPane.showInputDialog("¿Cuántas ventanas deseas abrir?"));
+        } catch (NumberFormatException e) {
+            // En caso de que el usuario no introduzca un número válido
+            System.out.println("Debes introducir un número válido. Abriendo una ventana por defecto.");
+            numVentanas = 1;
+        }
+        return numVentanas;
     }
 }

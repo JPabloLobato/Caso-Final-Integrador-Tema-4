@@ -9,16 +9,18 @@ public class Ventanas extends JFrame {
     private final JTextArea areaTexto;
     private final JLabel etiquetaPosicion;
     private final JLabel etiquetaProgreso;
-    private JScrollBar barraDesplazamiento;
+    private final JLabel etiquetaValidacionEmail;  // Nueva etiqueta para mostrar la validación del correo
 
     public Ventanas() {
         areaTexto = new JTextArea();
         JScrollPane scrollPane = new JScrollPane(areaTexto);
         etiquetaPosicion = new JLabel();
         etiquetaProgreso = new JLabel();
-        JPanel panelInferior = new JPanel(new GridLayout(1, 2));
+        etiquetaValidacionEmail = new JLabel();  // Inicialización de la nueva etiqueta
+        JPanel panelInferior = new JPanel(new GridLayout(1, 3));  // Aumentamos a 3 columnas
         panelInferior.add(etiquetaPosicion);
         panelInferior.add(etiquetaProgreso);
+        panelInferior.add(etiquetaValidacionEmail);  // Añadimos la nueva etiqueta al panel
         add(scrollPane, BorderLayout.CENTER);
         add(panelInferior, BorderLayout.SOUTH);
         setSize(500, 500);
@@ -37,7 +39,7 @@ public class Ventanas extends JFrame {
 
         JScrollPane scrollPane = (JScrollPane) areaTexto.getParent().getParent();
         scrollPane.validate();
-        barraDesplazamiento = scrollPane.getVerticalScrollBar();
+        JScrollBar barraDesplazamiento = scrollPane.getVerticalScrollBar();
 
         barraDesplazamiento.addAdjustmentListener(e -> {
             int valorMaximo = barraDesplazamiento.getMaximum() - barraDesplazamiento.getVisibleAmount();
@@ -46,6 +48,25 @@ public class Ventanas extends JFrame {
             etiquetaProgreso.setText("Progreso del documento: " + progreso + "%");
         });
 
+        areaTexto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                validarCorreo();  // Validar el correo cada vez que se suelte una tecla
+            }
+        });
+
         setVisible(true);
+    }
+
+    private void validarCorreo() {
+        String texto = areaTexto.getText();
+        String[] palabras = texto.split("\\s+");
+
+        for (String palabra : palabras) {
+            if (Validacion_Email.validarEmail(palabra)) {
+                etiquetaValidacionEmail.setText("Correo válido: " + palabra);
+                return;
+            }
+        }
+        etiquetaValidacionEmail.setText("Correo no válido");
     }
 }

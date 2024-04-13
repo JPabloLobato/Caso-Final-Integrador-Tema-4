@@ -1,8 +1,5 @@
 package groupId;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Main_AgendaContactos {
@@ -34,17 +31,8 @@ public class Main_AgendaContactos {
             System.out.println("Contactos agregados:");
             for (Contacto contacto : agenda.getContactos()) {
                 System.out.println(contacto);
-                guardarContactoEnArchivo(contacto);
             }
-        }
-    }
-
-    private static void guardarContactoEnArchivo(Contacto contacto) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("contactos.txt", true))) {
-            writer.write(contacto.toString());
-            writer.newLine();
-        } catch (IOException e) {
-            System.out.println("Error al guardar el contacto en el archivo: " + e.getMessage());
+            agenda.guardarContactoEnArchivo();
         }
     }
 }

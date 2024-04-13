@@ -1,3 +1,10 @@
+import groupId.Main_Editor;
+import groupId.Main_Comparador_Analizador;
+import groupId.Main_BuscadorPalabras;
+import groupId.Main_AgendaContactos;
+import groupId.Main_Interfaz;
+import groupId.Herramienta_dibujo;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -10,23 +17,23 @@ public class Main {
         JPanel menuPanel = new JPanel();
         menuPanel.setLayout(new BoxLayout(menuPanel, BoxLayout.Y_AXIS));
 
-        JButton itemEditor = new JButton("Abrir Editor de texto");
-        itemEditor.addActionListener(e -> {
+        JButton itemEditorTexto = new JButton("Abrir Editor de texto");
+        itemEditorTexto.addActionListener(e -> {
             Main_Editor.main(new String[]{});
         });
-        menuPanel.add(itemEditor);
+        menuPanel.add(itemEditorTexto);
 
-        JButton itemComparador = new JButton("Comparador y Contador de contenido");
-        itemComparador.addActionListener(e -> {
+        JButton itemComparadorAnalizador = new JButton("Abrir Comparador y analizador de texto");
+        itemComparadorAnalizador.addActionListener(e -> {
             Main_Comparador_Analizador.main(new String[]{});
         });
-        menuPanel.add(itemComparador);
+        menuPanel.add(itemComparadorAnalizador);
 
-        JButton itemBusqueda = new JButton("Búsqueda de Palabras por archivos");
-        itemBusqueda.addActionListener(e -> {
+        JButton itemBuscador = new JButton("Abrir Buscador de Palabras");
+        itemBuscador.addActionListener(e -> {
             Main_BuscadorPalabras.main(new String[]{});
         });
-        menuPanel.add(itemBusqueda);
+        menuPanel.add(itemBuscador);
 
         JButton itemContactos = new JButton("Contactos");
         itemContactos.addActionListener(e -> {
@@ -34,19 +41,19 @@ public class Main {
         });
         menuPanel.add(itemContactos);
 
-        JButton itemInterfaz = new JButton("Interfaz Gráfica");
+        JButton itemInterfaz = new JButton("Multiplicidad de ventanas");
         itemInterfaz.addActionListener(e -> {
             Main_Interfaz.main(new String[]{});
         });
         menuPanel.add(itemInterfaz);
 
-        JButton itemDibujo = new JButton("Herramienta de Dibujo");
+        JButton itemDibujo = new JButton("Herramienta de dibujo");
         itemDibujo.addActionListener(e -> {
-            Main_Dibujo.main(new String[]{});
+            Herramienta_dibujo.main(new String[]{});
         });
-
         menuPanel.add(itemDibujo);
-        frame.add(menuPanel, BorderLayout.WEST);
+
+        frame.add(menuPanel);
         frame.setVisible(true);
     }
 }

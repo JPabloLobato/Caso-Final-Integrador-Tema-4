@@ -1,12 +1,10 @@
 URL GitHub: https://github.com/JPabloLobato/Caso-Final-Integrador-Tema-4.git
 
 Hola, Rubén,
-¿Como estás? Este proyecto lo he dividido en 5 modulos. En cada modulo esta índicado en el título el
-nombre y el número de los ejercicios.
-Si ejecuta el Main.java principal nose porque no encuentra las clases de los otros modulos y no va
-estube buscando pero por más que hacía lo de internet no funcionaba.
-Es la segunda vez que hago el proyecto por si fallaba en algo y no me di cuenta. El proximo día le
-preguntaré si sabe que es.
-Si ejecuta el main de cada modulo vera que funciona o en el caso de los modulos, Interfaz Gráfica y
-Validación de E-Mail - Diseño Grafico el propio archivo se puede ejecutar.
+¿Como estás? Este proyecto lo he dividido en 5 modulos. Cada modulo tiene como título el nombre y
+los números de los ejercicios.
+Si ejecuta el Main.java principal encontrara un menú con varías opciones que inician los modulos.
+La validación de correo lo verá en el mulplicador de ventanas y el editor de texto.
+Como pongo en el correo, el proyecto lo he reparado, ya que el main.java no me iniciaba pero lo
+solucione gracias a un foro, ya que no sabía como se hacía.
 Muchas gracias, Juan Pablo Lobato.
